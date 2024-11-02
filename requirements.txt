@@ -1,0 +1,5 @@
+pypdf==4.2.0
+faiss-cpu==1.8.0
+streamlit==1.33.0
+pymongo~=4.7.3
+hdbcli==2.21.28

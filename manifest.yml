@@ -1,0 +1,11 @@
+applications:
+- name: logsensedeploytest
+  #docker:
+  #  image: rbhagat478/logsensedeploydocker:latest
+  memory: 4096M
+  disk_quota: 8G
+  instances: 1
+  buildpacks:
+    - python_buildpack
+  command: ./start.sh
+  timeout: 600 #timeout of start command in secs

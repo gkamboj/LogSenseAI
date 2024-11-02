@@ -1,0 +1,93 @@
+app:
+  allowWithoutContextResults: True
+
+openai:
+  key: 'sk-xxxx'
+  model: 'gpt-3.5-turbo-0125'
+  active: True
+  temperature: 0
+
+logsense:
+  datasets:
+    - path: 'DataSet/KBA'
+      glob: '**/*.pdf'
+      loaderClass: 'langchain_community.document_loaders.pdf.PyPDFLoader'
+      filesToIgnore:
+        - 'DBColumnLimitationSize.pdf'
+      type: 'KBA'
+    - path: 'DataSet'
+      glob: '**/*.csv'
+      loaderClass: 'langchain_community.document_loaders.csv_loader.CSVLoader'
+      type: 'Server Errors'
+  queryTypes:
+    - name: CHAT
+      fileUpload: No
+    - name: LOG FILE
+      fileUpload: Yes
+      extensions:
+        - log
+        - txt
+  pageTitle: LogSense AI
+#  kbaUrl: 'https://me.sap.com/notes/{document_id}'
+
+sapAI:
+  active: True
+  configs:
+    authUrl: 'https://sapit-core-playground-vole.authentication.eu10.hana.ondemand.com'
+    clientId: ''
+    clientSecret: ''
+    baseUrl: 'https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com'
+    resourceGroup: ''
+    temperature: 0
+    deploymentId: ''
+    embeddings:
+      model: 'text-embedding-ada-002'
+  openai:
+    model: 'gpt-4'
+    maxTokens: 8192
+
+streamlit:
+  spinner:
+    messages:
+      find_logs_for_file: 'Fetching error logs from the uploaded file'
+      get_allowed_file_types: False
+      get_allowed_query_types: False
+      get_assistant_avatar: False
+      get_avatar_for_role: False
+      get_csv_agent: 'Reading the uploaded file'
+      get_embeddings: False
+      get_file_text: 'Reading the uploaded file'
+      get_files_text: 'Reading the uploaded files'
+      get_llm: 'Connecting to LLM'
+      get_loaders: 'Loading the knowledge base files'
+      get_relevant_context: False
+      get_processed_data_from_loader: 'Creating the knowledge source'
+      get_processed_data_from_text: 'Creating the vector database'
+      get_prompt_result: 'Generating query response'
+      get_prompt_result_from_context: 'Generating query response'
+      get_user_avatar: False
+      is_success_response: 'Generating query response'
+      write_response: 'Writing response'
+
+mongo:
+  connectionString: 'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.9'
+  database: 'logsense'
+  mockData: True
+
+hana:
+  address: 'xxxx.hana.prod-us10.hanacloud.ondemand.com'
+  port: 443
+  user: ''
+  password: ''
+  schema: ''
+  embedding:
+    contextSections:
+      - section: cause
+        priority: 1
+      - section: resolution
+        priority: 2
+      - section: symptom
+        priority: 4
+      - section: reproducing the issue
+        priority: 3
+
