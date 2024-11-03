@@ -8,17 +8,6 @@ openai:
   temperature: 0
 
 logsense:
-  datasets:
-    - path: 'DataSet/KBA'
-      glob: '**/*.pdf'
-      loaderClass: 'langchain_community.document_loaders.pdf.PyPDFLoader'
-      filesToIgnore:
-        - 'DBColumnLimitationSize.pdf'
-      type: 'KBA'
-    - path: 'DataSet'
-      glob: '**/*.csv'
-      loaderClass: 'langchain_community.document_loaders.csv_loader.CSVLoader'
-      type: 'Server Errors'
   queryTypes:
     - name: CHAT
       fileUpload: No
@@ -28,7 +17,6 @@ logsense:
         - log
         - txt
   pageTitle: LogSense AI
-#  kbaUrl: 'https://me.sap.com/notes/{document_id}'
 
 sapAI:
   active: True
