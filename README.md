@@ -80,7 +80,16 @@ Here are a few options for deploying the application:
 
 ## Future Improvements
 1. **SharePoint integration**: Users will be able to share SharePoint links to their own documents, which will be stored in the database and used by the LLM to answer queries.
-2. **Log file upload interface**: Planned alternate chat interface to allow users to upload log file, which will be analysed to fetch error logs and display as dropdown to the user. Users will be able to select specific logs for analysis, and the application will utilize the LLM to display the detailed results for the selected logs. This feature is currently in development, and currently mock logs are shown for every uploaded file.
+2. **Log file upload interface**: Planned alternate chat interface to allow users to upload log file, which will be analysed to fetch error logs and display as dropdown to the user. Users will be able to select specific logs for analysis, and the application will utilize the LLM to display the detailed results for the selected logs. This feature can be accessed using _LOG FILE_ interaction type. It is in development, and currently mock logs are shown for every uploaded file. Screenshots for this feature:
+  - Landing screen:
+    <img width="1723" alt="5-log-interaction" src="https://github.com/user-attachments/assets/4bc469e8-26d0-4b6c-9ec2-4542f16ca8af">
+
+  - Dropdown with logs fetched from uploaded file:
+    <img width="1727" alt="6-logs-from-file" src="https://github.com/user-attachments/assets/2b3ed106-9777-41ac-b0b4-551ee11f5fd8">
+
+  - Chat bot response for the selected log:
+    <img width="1728" alt="7-logs-response" src="https://github.com/user-attachments/assets/0f12d72f-67e3-4151-b912-a5238dbef560">
+
 
 ## Contributing
 We welcome contributions to enhance LogSense AI! Please fork the repository and submit a pull request for any new features or bug fixes.
