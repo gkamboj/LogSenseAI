@@ -66,6 +66,12 @@ Here are some screenshots showcasing working deployments of the application.
   <img width="1727" alt="3-response from context" src="https://github.com/user-attachments/assets/5733782c-eda3-4941-94aa-57a45dbc7a8c">
 
 - [_CHAT_ interaction type] Query for which response is not available from stored documents:
+     - If flag `app.allowWithoutContextResults` is false, that is results outside context are not allowed:
+       <img width="1724" alt="4 1-out-of-context" src="https://github.com/user-attachments/assets/659b6d5d-b66d-4117-a0af-8ca71305fdc1">
+
+     - If flag `app.allowWithoutContextResults` is true:
+       <img width="1715" alt="4 2-out-of-context" src="https://github.com/user-attachments/assets/2f9a4b2f-41ef-427c-8c85-92b65c344999">
+
 
 ## Customizations
 You can easily customize the application in the following ways:
