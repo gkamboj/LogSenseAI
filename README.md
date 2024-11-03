@@ -1,6 +1,6 @@
 # LogSense AI
 
-LogSense AI is a generative AI chatbot built on [Streamlit](https://streamlit.io/) that effectively addresses user queries by utilizing a vector-based document database. It retrieves the most relevant documents using cosine similarity search for each user inquiry. By employing the Retrieval-Augmented Generation (RAG) framework, the retrieved documents serve as context for generating responses through a large language model (LLM) using LangChain. Currently, the documents stored in the database consist of Knowledge Base Articles (KBAs) related to SAP Commerce Cloud, sourced from SAP's support portal. Please note that these documents are accessible only within SAP's network and are not included in this repository.
+LogSense AI is a generative AI chatbot built on [Streamlit](https://streamlit.io/) that effectively addresses user queries by utilizing a vector-based document database. It retrieves the most relevant documents using cosine similarity search for each user inquiry. By employing the Retrieval-Augmented Generation (RAG) framework, the retrieved documents serve as context for generating responses through a large language model (LLM) using [LangChain](https://www.langchain.com/). Currently, the documents stored in the database consist of Knowledge Base Articles (KBAs) related to SAP Commerce Cloud, sourced from SAP's support portal. Please note that these documents are accessible only within SAP's network and are not included in this repository.
 
 ## Table of Contents
 - [Architecture](#architecture)
@@ -41,7 +41,7 @@ After cloning the repository, follow these steps to set up the project:
      pip install "generative-ai-hub-sdk[all]==1.2.2" --extra-index-url https://int.repositories.cloud.sap/artifactory/api/pypi/proxy-deploy-releases-hyperspace-pypi/simple/
      pip install -r requirements.txt
      ```
-   - If you prefer to connect directly to the LLM via OpenAI instead of using the SAP proxy, you can skip the installation of `generative-ai-hub-sdk`.
+   - If you prefer to connect directly to the LLM via OpenAI instead of using the SAP proxy, you can skip the installation of `generative-ai-hub-sdk` and install required LangChain libraries instead.
 
 5. **Run the Application**:
    ```bash
