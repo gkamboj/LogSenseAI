@@ -2,11 +2,8 @@ import json
 from collections import defaultdict
 
 import streamlit as st
-from langchain.chains import ConversationalRetrievalChain
 from langchain.chains import LLMChain
-from langchain_community.document_loaders.merge import MergedDataLoader
 from langchain.prompts import PromptTemplate
-from services import hana_service as hs
 
 from config.configuration import configs
 from constants import app_constants as ac
@@ -81,10 +78,11 @@ def handle_user_input(prompt, _llm, _qa, user_avatar, assistant_avatar, query_ty
         try:
             response = _qa.run({"context": context, "question": combined_prompt})
             print(f'Result: {json.dumps(response)}')
-            if configs['app.allowWithoutContextResults'] and not is_success_response(response):
-                prompt = get_static_prompt('without_context') + prompt
-                response = ops.get_prompt_result(_llm, prompt)
+            if not is_success_response(response):
                 prefix = PREFIX_NO_CONTEXT
+                if configs['app.allowWithoutContextResults']:
+                    prompt = get_static_prompt('without_context') + prompt
+                    response = ops.get_prompt_result(_llm, prompt)
             else:
                 documents = set((doc['document']['id'], doc['document']['url']) for doc in context)
         except Exception as e:
