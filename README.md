@@ -57,10 +57,15 @@ Once the application is running, you can interact with LogSense AI by entering y
 ## Screenshots
 Here are some screenshots showcasing working deployments of the application.
 - Startup:
-  
+  <img width="1597" alt="1-startup" src="https://github.com/user-attachments/assets/6c63b5cd-3162-4239-a707-2333ea675d43">
+
 - Chat inteerface selection (See [Future Improvements](#future-improvements) for details of _LOG FILE_ interaction type):
-- [_CHAT_ interaction type] Query for which response is available from stored documents:
-- Query for which response is not available from stored documents:
+  <img width="1728" alt="2-interaction-types" src="https://github.com/user-attachments/assets/da906a2d-0e8c-4790-9167-1a1bc45af523">
+
+- [_CHAT_ interaction type] Query for which response is available from stored documents. Note that response also shares link to source documents:
+  <img width="1727" alt="3-response from context" src="https://github.com/user-attachments/assets/5733782c-eda3-4941-94aa-57a45dbc7a8c">
+
+- [_CHAT_ interaction type] Query for which response is not available from stored documents:
 
 ## Customizations
 You can easily customize the application in the following ways:
