@@ -14,7 +14,7 @@ LogSense AI is a generative AI chatbot built on [Streamlit](https://streamlit.io
 - [License](#license)
 
 ## Architecture
-The application connects to the LLM via an SAP-provided proxy and directly through LangChain. Below is the architecture diagram illustrating the connection through the SAP proxy:
+The application connects to the LLM via an SAP-provided proxy as well as directly through LangChain. Below is the architecture diagram illustrating the connection through the SAP proxy:
 <img width="996" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/d42e2716-1663-44ae-98c1-ed26052599ad">
 
 ## Setup Instructions
