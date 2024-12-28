@@ -21,21 +21,21 @@ The application connects to the LLM via an SAP-provided proxy as well as directl
 
 After cloning the repository, follow these steps to set up the project:
 
-1. **Set Up Your Development Environment**:
+1. **Set up your local development Environment**:
    - Download and install JetBrains PyCharm IDE or your preferred IDE.
    - The following instructions will focus on PyCharm, but most IDEs provide similar features.
 
-2. **Open the Project**:
+2. **Open the project**:
    - In PyCharm, navigate to `File -> Open` and select the cloned repository folder.
 
-3. **Set Up a Local Virtual Environment**:
+3. **Set up a local virtual environment**:
    - Go to `Settings` > `Project: LogSenseAI` > `Python Interpreter` > `Add Interpreter`.
    - Choose `Add Local Interpreter` > `Virtualenv Environment`.
      1. Select `Environment` -> `New`.
      2. Set `Base Interpreter` to your installed Python version (e.g., Python 3.x).
      3. Click `OK`.
 
-4. **Install Dependencies**:
+4. **Install dependencies**:
    - Run the following commands in your terminal:
      ```bash
      pip install "generative-ai-hub-sdk[all]==1.2.2" --extra-index-url https://int.repositories.cloud.sap/artifactory/api/pypi/proxy-deploy-releases-hyperspace-pypi/simple/
@@ -43,12 +43,12 @@ After cloning the repository, follow these steps to set up the project:
      ```
    - If you prefer to connect directly to the LLM via OpenAI instead of using the SAP proxy, you can skip the installation of `generative-ai-hub-sdk` and install required LangChain libraries instead.
 
-5. **Run the Application**:
+5. **Run the application**:
    ```bash
    streamlit run app.py
    ```
    
-6. **Access the User Interface**:
+6. **Access the user interface**:
 Open your web browser and navigate to [http://localhost:8500/](http://localhost:8500/) (or the appropriate port if different).
 
 ## Usage
